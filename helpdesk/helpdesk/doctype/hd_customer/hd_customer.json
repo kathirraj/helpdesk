@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:customer_name",
  "creation": "2022-11-30 00:08:11.831313",
@@ -9,6 +10,7 @@
  "field_order": [
   "image",
   "customer_name",
+  "project",
   "domain",
   "references_tab",
   "contact_html"
@@ -41,12 +43,18 @@
    "fieldname": "contact_html",
    "fieldtype": "HTML",
    "label": "Contact HTML"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Table MultiSelect",
+   "label": "Project",
+   "options": "Project Child Table"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-26 14:18:18.944543",
+ "modified": "2024-03-12 12:27:50.400501",
  "modified_by": "Administrator",
  "module": "Helpdesk",
  "name": "HD Customer",

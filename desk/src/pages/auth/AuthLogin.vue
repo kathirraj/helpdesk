@@ -1,6 +1,7 @@
 <template>
-  <div class="flex h-screen w-screen justify-center bg-gray-100">
-    <div class="mt-32 w-full px-4">
+  <section class="bg-green-1 dark:bg-dark ">
+  <div class="flex h-screen w-screen justify-center bg-green-100">
+    <div class="mt-32 w-full px-4 border-purple-950 ">
       <img
         v-if="configStore.brandLogo"
         :src="configStore.brandLogo"
@@ -8,7 +9,7 @@
       />
       <Logo v-else class="mx-auto h-8" />
       <div class="mt-6 flex items-center justify-center space-x-1.5">
-        <span class="text-3xl font-semibold text-gray-900">Login</span>
+        <span class="text-3xl font-semibold text-green-900">Login</span>
       </div>
       <div class="mx-auto mt-6 w-full px-4 sm:w-96">
         <form
@@ -54,7 +55,7 @@
           <RouterLink :to="{ name: SIGNUP }">
             <button
               v-if="!authProviders.data.length"
-              class="mt-2 w-full py-2 text-base text-gray-600"
+              class="mt-2 w-full py-2 text-base text-green-600"
               @click="showEmailLogin = false"
             >
               Don't have an account? Signup
@@ -62,7 +63,7 @@
           </RouterLink>
           <button
             v-if="authProviders.data.length"
-            class="mt-2 w-full py-2 text-base text-gray-600"
+            class="mt-2 w-full py-2 text-base text-green-600"
             @click="showEmailLogin = false"
           >
             Login using other methods
@@ -78,7 +79,7 @@
           <a
             v-for="provider in authProviders.data"
             :key="provider.name"
-            class="block h-7 w-full rounded border bg-gray-900 px-3 py-1 text-center text-base text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            class="block h-7 w-full rounded border bg-green-900 px-3 py-1 text-center text-base text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400"
             :href="provider.auth_url"
           >
             Login via {{ provider.provider_name }}
@@ -87,6 +88,7 @@
       </div>
     </div>
   </div>
+</section>
 </template>
 
 <script setup lang="ts">

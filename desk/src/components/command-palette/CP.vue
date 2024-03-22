@@ -152,12 +152,12 @@ export default {
             route: { name: "DeskDashboard" },
             condition: () => true,
           },
-          {
-            title: "Agents",
-            icon: () => h(LucideUser),
-            route: { name: "AgentList" },
-            condition: () => true,
-          },
+          // {
+          //   title: "Agents",
+          //   icon: () => h(LucideUser),
+          //   route: { name: "AgentList" },
+          //   condition: () => true,
+          // },
         ].filter((item) => (item.condition ? item.condition() : true)),
       };
     },

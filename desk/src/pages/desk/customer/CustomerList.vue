@@ -60,6 +60,11 @@ const columns = [
     width: "w-80",
   },
   {
+    label: "Project",
+    key: "project",
+    width: "w-80",
+  },
+  {
     label: "Domain",
     key: "domain",
     width: "w-80",
@@ -68,7 +73,7 @@ const columns = [
 
 const customers = createListManager({
   doctype: "HD Customer",
-  fields: ["name", "image", "domain"],
+  fields: ["name", "image","project", "domain"],
   auto: true,
   transform: (data) => {
     for (const d of data) {

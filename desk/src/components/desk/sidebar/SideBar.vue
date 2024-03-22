@@ -130,43 +130,43 @@ const menuOptions = computed(() => [
     icon: LucideLayoutGrid,
     to: AGENT_PORTAL_DASHBOARD,
   },
-  {
-    label: "Agents",
-    icon: LucideUser,
-    to: AGENT_PORTAL_AGENT_LIST,
-  },
-  {
-    label: "Knowledge base",
-    icon: LucideBookOpen,
-    to: "DeskKBHome",
-    isBeta: true,
-  },
+  // {
+  //   label: "Agents",
+  //   icon: LucideUser,
+  //   to: AGENT_PORTAL_AGENT_LIST,
+  // },
+  // {
+  //   label: "Knowledge base",
+  //   icon: LucideBookOpen,
+  //   to: "DeskKBHome",
+  //   isBeta: true,
+  // },
 ]);
 
 const extraOptions = [
-  {
-    label: "Teams",
-    icon: LucideUsers,
-    to: AGENT_PORTAL_TEAM_LIST,
-  },
-  {
-    label: "Escalation rules",
-    icon: LucideArrowUpFromLine,
-    to: AGENT_PORTAL_ESCALATION_RULE_LIST,
-    isBeta: true,
-  },
-  {
-    label: "Ticket types",
-    icon: LucideFolderOpen,
-    to: AGENT_PORTAL_TICKET_TYPE_LIST,
-    hide: true,
-  },
-  {
-    label: "Canned responses",
-    icon: LucideCloudLightning,
-    to: "CannedResponses",
-    isBeta: true,
-  },
+  // {
+  //   label: "Teams",
+  //   icon: LucideUsers,
+  //   to: AGENT_PORTAL_TEAM_LIST,
+  // },
+  // {
+  //   label: "Escalation rules",
+  //   icon: LucideArrowUpFromLine,
+  //   to: AGENT_PORTAL_ESCALATION_RULE_LIST,
+  //   isBeta: true,
+  // },
+  // {
+  //   label: "Ticket types",
+  //   icon: LucideFolderOpen,
+  //   to: AGENT_PORTAL_TICKET_TYPE_LIST,
+  //   hide: true,
+  // },
+  // {
+  //   label: "Canned responses",
+  //   icon: LucideCloudLightning,
+  //   to: AGENT_PORTAL_CANNED_RESPONSE_LIST,
+  //   isBeta: true,
+  // },
   {
     label: "Customers",
     icon: LucideUserCircle2,
@@ -175,6 +175,11 @@ const extraOptions = [
   {
     label: "Contacts",
     icon: LucideContact2,
+    to: AGENT_PORTAL_CONTACT_LIST,
+  },
+  {
+    label: "User",
+    icon: LucideUsers,
     to: AGENT_PORTAL_CONTACT_LIST,
   },
 ];

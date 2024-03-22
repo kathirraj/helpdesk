@@ -3,7 +3,7 @@
     <template #body-main>
       <div class="flex flex-col items-center gap-4 p-6">
         <div class="text-xl font-medium text-gray-900">
-          {{ customer.doc?.name }}
+          {{ customer.doc?.name }}-{{ customer.doc?.project  }}
         </div>
         <Avatar
           size="lg"
@@ -29,7 +29,9 @@
         </div>
         <form class="w-full" @submit.prevent="update">
           <Input v-model="domain" label="Domain" placeholder="example.com" />
+          <Input v-model="project" label="Project" placeholder="erpnext" />
         </form>
+       
       </div>
     </template>
   </Dialog>
@@ -50,6 +52,14 @@ const props = defineProps({
   name: {
     type: String,
     required: true,
+  },
+});
+const project = computed({
+  get() {
+    return customer.doc?.project;
+  },
+  set(p: string) {
+    customer.doc.project = p;
   },
 });
 
@@ -91,8 +101,12 @@ const options = computed(() => ({
 }));
 
 function update() {
+  console.log("Update function called");
+  console.log("Domain:", domain.value);
+  console.log("Project:", project.value);
   customer.setValue.submit({
     domain: domain.value,
+    project:project.value
   });
 }
 
@@ -101,4 +115,6 @@ function updateImage(file) {
     image: file?.file_url || null,
   });
 }
+
+
 </script>

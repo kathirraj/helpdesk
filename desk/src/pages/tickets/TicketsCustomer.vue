@@ -125,11 +125,7 @@ const columns = [
     key: "status",
     width: "w-32",
   },
-  {
-    label: "Priority",
-    key: "priority",
-    width: "w-32",
-  },
+ 
   {
     label: "First Response",
     key: "response_by",
@@ -140,11 +136,7 @@ const columns = [
     key: "resolution_by",
     width: "w-32",
   },
-  {
-    label: "Created",
-    key: "creation",
-    width: "w-32",
-  },
+
 ];
 
 const tickets = createListManager({

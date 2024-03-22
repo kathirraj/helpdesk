@@ -13,6 +13,14 @@
           </div>
           <div class="space-y-1">
             <Input
+              v-model="project"
+              label="Project"
+              type="text"
+              placeholder="eg: Erpnext, Tally"
+            />
+          </div>
+          <div class="space-y-1">
+            <Input
               v-model="domain"
               label="Domain"
               type="text"
@@ -71,6 +79,7 @@ export default {
   data() {
     return {
       customer: "",
+      project:"",
       domain: "",
     };
   },
@@ -78,6 +87,7 @@ export default {
     addCustomer() {
       const inputParams = {
         customer_name: this.customer,
+        project:this.project,
         domain: this.domain,
       };
       this.$resources.newCustomer.submit({
@@ -90,6 +100,7 @@ export default {
     close() {
       this.customer = "";
       this.domain = "";
+      this.project="";
       this.$emit("close");
     },
   },
